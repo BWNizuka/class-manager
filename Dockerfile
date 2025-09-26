@@ -1,11 +1,6 @@
 # Multi-stage Docker build for Class Management System
 FROM python:3.11-slim as base
 
-COPY requirements.txt .
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt && \
-    pip show fastapi
-
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
