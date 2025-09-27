@@ -1,12 +1,16 @@
 import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Lấy thư mục gốc của project (class-manager)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
 
 import streamlit as st
 import pandas as pd
 from dotenv import dotenv_values
 from pymongo import MongoClient
 
-from ..backend.services.class_manager import ClassManager
+from backend.services.class_manager import ClassManager
 from backend.data.models import Student, Teacher, Course
 
 # -----------------------------
