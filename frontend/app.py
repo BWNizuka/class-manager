@@ -1,9 +1,12 @@
 import sys, os
 
-# Lấy thư mục gốc của project (class-manager)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Thư mục gốc = nơi chứa cả frontend và backend
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if BASE_DIR not in sys.path:
-    sys.path.append(BASE_DIR)
+    sys.path.insert(0, BASE_DIR)
+
+print(">>> SYS.PATH:", sys.path)  # debug, xem log khi deploy
+
 
 import streamlit as st
 import pandas as pd
