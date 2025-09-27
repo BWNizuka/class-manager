@@ -57,8 +57,8 @@ class Settings(BaseSettings):
     sqlite_echo: bool = False
     
     # MongoDB Configuration
-    mongodb_url: str = "mongodb://localhost:27017"
-    mongodb_database_name: str = "class_management"
+    mongodb_url: str = "mongodb+srv://nthieu:EarthDefender@cluster0.qtwmo2t.mongodb.net/classmanager?retryWrites=true&w=majority&appName=Cluster0y"
+    mongodb_database_name: str = "classmanager"
     mongodb_min_connections: int = 10
     mongodb_max_connections: int = 100
     mongodb_max_idle_time_ms: int = 30000
