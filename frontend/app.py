@@ -6,7 +6,7 @@ import pandas as pd
 from dotenv import dotenv_values
 from pymongo import MongoClient
 
-from backend.services.class_manager import ClassManager
+from ..backend.services.class_manager import ClassManager
 from backend.data.models import Student, Teacher, Course
 
 # -----------------------------
